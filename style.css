@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(182, 222, 254);
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.sect_title{
+    text-align: center;
+    font-size: 2.2rem;
+    color: rgb(53, 53, 255);
+    text-decoration: underline;
+    margin-top: 3rem; 
+}
+
+/* -------navbar--------- */
+nav {
+    background-color: rgb(87, 227, 255);
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    font-size: 1.25rem;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.485);
+
+    
+}
+nav .nav_logo a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 2.3rem;
+    margin-left: 4rem;
+}
+nav .nav_menu {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+nav .nav_menu ul {
+    display: flex;
+    list-style: none;
+}
+nav .nav_menu ul li {
+    margin-right: 50px;
+}
+nav .nav_menu ul li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    opacity: 0.85;
+    position: relative;
+    
+}
+nav .nav_menu ul li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -6px;
+    left: 0px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+nav .nav_menu ul li a:hover {
+    color: black;
+    font-weight: 500;
+    font-size: 1.3rem;
+    opacity: 1; 
+}
+nav .nav_menu ul li a:hover::after{
+    width: 100%;
+}
+
+/* ---------------HeroSection--------------- */
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75vh;
+    padding: 80px 0 0 0 ;
+    margin: 100px 0 50px 0;
+}
+.firstsection .leftsection {
+    width: 40%;
+    font-size: 2rem;
+    margin: 5rem auto;
+}
+.firstsection .leftsection h2{
+    margin-top: 10px;
+    /* line-height: 1.5; */
+}
+.firstsection .leftsection .btn{
+    margin: 12px 15px 0;
+    padding: 14px 30px;
+    background-color: rgb(11, 96, 255);
+    color: white;
+    opacity: 0.8;
+    border: none;
+    text-align: center;
+    width: 35%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+.firstsection .leftsection .btn:hover{
+    opacity: 1;
+    font-weight: 600;
+    transform: scale(1.06);
+}
+.firstsection .leftsection .blue {
+    color: rgb(89, 128, 255);
+}
+.firstsection .leftsection #element {
+    background: linear-gradient(135deg, #3dc8e0, #057996);
+    /* Standard property */
+    background-clip: text;
+    /* Webkit browsers support */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.firstsection .leftsection .icons {
+    margin-left: 20px; 
+}
+.firstsection .leftsection .icons i {
+    color: rgb(68, 76, 80);
+    font-size: 2.60rem; 
+}
+.firstsection .leftsection .icons i:hover {
+    color: rgb(88, 141, 253);
+    font-size: 2.90rem;
+}
+
+.firstsection .rightsection {
+    width: 40%;
+}
+.firstsection .rightsection img {
+    width: 65%;
+    border-radius: 50%;
+    margin-top: 8rem;
+}
+/* ------------ About Section ------------------ */
+.secondsection {
+    height: 80vh;
+    padding: 20px;
+    
+}
+
+.secondsection .Info {
+    padding: 10px;
+    margin: 2rem auto;
+    width: 60%;
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+/* --------------------------Skill-section--------------------*/
+
+.third_sec{
+    height: 75vh;
+    padding-top: 1.5rem;
+}
+.third_sec .skills-tab{
+    margin: 70px auto;
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.third_sec .skills-tab .skill-box{
+    border: 0px solid black;
+    width: 25%;
+    margin: 0 15px;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1adcfe, #0dacd4);
+    transition: 0.3s;
+
+}
+.third_sec .skills-tab .skill-box:hover{
+    background: linear-gradient(135deg, #6de9ff, #05c2f2);
+    transform: translateY(-15px);
+}
+.third_sec .skills-tab .skill-box .skill-head{
+    font-size: 1.4rem;
+    padding: 10px 5px;
+    border-bottom: 1px solid black;
+}
+.third_sec .skills-tab .skill-box ul li{
+    margin: 14px 40px;
+}
+
+/* --------------Project Section ------------------ */
+.project_sec{
+    height: 75vh;
+    margin-top: 1.5rem;
+    padding-top: 5rem;
+}
+.project-tab {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding: 50px 150px;
+}
+.project_info{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    /* border: 2px solid black; */
+}
+.project_info img{
+    width: 100%;
+    border-radius: 10px;
+    display: block; 
+    transition: transform 0.3s;
+}
+.project_info .layer{
+    background: linear-gradient(rgba(234, 144, 208, 0.1), #ff44c7);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-decoration: none;
+    
+
+}
+.project_info:hover img{    
+    transform: scale(1.1);
+}
+
+/* --------------------- Contact Section ------------ */
+/* .contact_sec .contact_box{
+    display: flex;
+    justify-content: space-around;
+}
+.right_contact .contact_form{
+    display: inline-block;
+    
+
+} */
