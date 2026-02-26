@@ -53,8 +53,8 @@
     <main>
 
       <!-- ---------------------Hero Section---------------- -->
-      <section class="Hero_sec" id="home">
-        <div class="left-hero">
+      <section class="hero_section" id="home">
+        <div class="hero-left">
           <h2>
             Hi, I am <span class="blue">Mohit</span>
             <br />
@@ -62,35 +62,35 @@
           </h2>
           <br />
           <div class="btn-box">
-            <a href="images/image.png"><button class="btn">Download CV</button></a>
+            <a href="media/Mohit_Resume.pdf" download="Mohit_Kumar_Resume.pdf" class="btn">Download CV</a>
           </div>
           <br />
           <div class="icons">
             <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
             &nbsp; &nbsp; &nbsp;  
-            <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/mohitk23"><i class="fa fa-github" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="right-hero">
+        <div class="hero-right">
           <div>
-            <img src="images/image.png" alt="image" />
+            <img src="media/images/Mohit_pic.png" alt="Mohit_photo" />
           </div>
         </div>
       </section>
 
       <!-- ---------------- About Section ----------------- -->
-      <section class="about_sec" id="about">
+      <section class="about_section" id="about">
         <h2 class="sect_title" >About Me</h2>
         <div class="Info">
-          <h4>I'm Mohit Kumar</h3>
-          a passionate Full Stack (MERN) Developer with a strong interest in building responsive and user-friendly web applications.<br/>
-          I have experience working with technologies like HTML, CSS, JavaScript, React.js, Node.js, MongoDB, and MySQL.<br/>
-          I enjoy learning new technologies and building real-world projects. Currently, I am looking for an opportunity as a Frontend or Full Stack Developer to apply my skills and grow in the software development field.
+          <h4>I'm Mohit Kumar</h4>
+          <p>a passionate Full Stack (MERN) Developer with a strong interest in building responsive and user-friendly web applications.</p>
+          <p>I have experience working with technologies like HTML, CSS, JavaScript, React.js, Node.js, MongoDB, and MySQL.</p>
+          <p>I enjoy learning new technologies and building real-world projects. Currently, I am looking for an opportunity as a Frontend or Full Stack Developer to apply my skills and grow in the software development field.</p>
         </div>
       </section>
 
       <!-- ------------------------- Skill Section ------------------- -->
-      <section class="skill_sec" id="skills">
+      <section class="skill_section" id="skills">
         <h2 class="sect_title">Skills</h2>
         <div class="skills-tab">
           <div class="skill-box">
@@ -127,44 +127,44 @@
       </section>
 
       <!-- ------------------- Project Section --------------- -->
-      <section class="project_sec" id="project">
+      <section class="project_section" id="project">
         <h2 class="sect_title">Project</h2>
         <div class="project-list">
           <div class="project_info">
-              <img src="images/project1.png" alt="image" />
+              <img src="media/images/project1.png" alt="image" />
               <div class="layer">
-                <h3>Wanderlust Plateform</h3>
-                <a href="https://wanderlust-i7um.onrender.com/listings"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <h3>Wanderlust Platform</h3>
+                <p class="project_descript">A full-stack travel listing platform built with Node.js, Express and MongoDB.</p>
+                <a href="https://wanderlust-i7um.onrender.com/listings" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link" aria-hidden="true"></i></a>
               </div>
           </div>
           <div class="project_info">
-              <img src="images/project1.png" alt="image" />
+              <img src="media/images/project2.png" alt="image" />
               <div class="layer">
-                <h3>Wanderlust Plateform</h3>
-                <a href="https://wanderlust-i7um.onrender.com/listings"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <h3>Simon Says Memory Game</h3>
+                <p class="project_descript">A memory based simon says game built with html, css and javascript.</p>
+                <a href="https://github.com/mohitk23/Simon-Says-Game" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link" aria-hidden="true"></i></a>
               </div>
           </div>
           <div class="project_info">
-              <img src="images/project1.png" alt="image" />
+              <img src="media/images/project3.png" alt="image" />
               <div class="layer">
-                <h3>Wanderlust Plateform</h3>
-                <a href="https://wanderlust-i7um.onrender.com/listings"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+                <h3>Spotify Web Player UI Clone</h3>
+                <p class="project_descript">Web Player UI Clone built with html & css.</p>
+                <a href="https://github.com/mohitk23/Spotify-Clone" target="_blank" rel="noopener noreferrer"><i class="fa fa-external-link" aria-hidden="true"></i></a>
               </div>
           </div>
         </div>
       </section>
-      <br/>
-      <br/>
-      <br/>
 
       <!-- ----------------------- Contact Section --------------------- -->
-       <section class="contact_sec" id="contact">
+       <section class="contact_section" id="contact">
         <h2 class="sect_title">Contact Me</h2>
         <div class="contact_box">
           <div class="left_contact">
             <h3>Contact Me</h3>
             <p><i class="fa fa-phone-square" aria-hidden="true"></i> +91 0987654321</p>
-            <p><i class="fa fa-paper-plane" aria-hidden="true"></i> example@gmail.com</p>
+            <p><i class="fa fa-paper-plane" aria-hidden="true"></i> mohitkumar44023@gmail.com</p>
             <div class="social-icons">
               <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
               <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
@@ -192,40 +192,8 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-
-    <script>
-      var typed = new Typed("#element", {
-        strings: ["Web Developer", "Full Stack Developer"],
-        typeSpeed: 60,
-      });
-    </script>
-<!-- ------------form to google sheet ----------------- -->
-      <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzM-BaxdSZM5vfYzAYyk1aBNJlxKn-DSUUX4hLwdTZ83TynVDLuONlNZtHKIj5mThg/exec'
-      const form = document.forms['Contact-form-to-google-sheet'];
-      const msg = document.getElementById("msg");
-      
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then(response => response.json())
-          .then(response => {
-            msg.innerHTML = "Message sent successfully";
-            setTimeout(function(){
-              msg.innerHTML= "";
-            },5000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-  <script>
-    const menu = document.querySelector(".nav_menu");
-
-    function toggleMenu(){
-      menu.classList.toggle("active");
-    }
-  </script>
+    <!-- -------type.js------- -->
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>  
+    <script src="script.js"></script>
   </body>
 </html>

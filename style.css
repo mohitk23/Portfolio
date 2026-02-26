@@ -1,14 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
 }
 body {
     background-color: rgb(182, 222, 254);
     font-family: "Poppins", sans-serif;
+    padding-top: 70px;
 }
 html{
     scroll-behavior: smooth;
 }
+
 .sect_title{
     text-align: center;
     font-size: 2.2rem;
@@ -23,9 +26,9 @@ html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    min-height: 60px;
     font-size: 1.25rem;
-    padding: 10px;
+    padding: 0 20px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -75,7 +78,7 @@ html{
 .nav_menu ul li a:hover {
     color: black;
     font-weight: 500;
-    font-size: 1.3rem;
+    transform: scale(1.05);
     opacity: 1; 
 }
 .nav_menu ul li a:hover::after{
@@ -86,43 +89,46 @@ html{
 }
 
 /* ---------------HeroSection--------------- */
-.Hero_sec {
+.hero_section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 80px 0 0 0 ;
-    margin: 50px auto;
+    padding-top: 20px;
 }
-.left-hero {
-    width: 40%;
+.hero-left {
+    width: 50%;
     font-size: 2rem;
     margin: 4rem auto;
+    padding-left: 6rem;
 }
-.left-hero h2{
+.hero-left h2{
     margin-top: 10px;
+    padding-left: 1rem;
 }
-.left-hero .btn{
-    margin: 12px 15px 0;
+.hero-left .btn{
+    margin: 12px 18px 0;
     padding: 14px 30px;
     background-color: #0b60ff;
     color: white;
-    border: none;
-    opacity: 0.8;
+    cursor: pointer;
     text-align: center;
-    width: 35%;
+    text-decoration: none;
+    display: inline-block;
+    width: auto;    
     border-radius: 8px;
     font-size: 1.2rem;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-.left-hero .btn:hover{
-    opacity: 1;
-    font-size: 1.3rem;
-    transform: scale(1.05);
+.hero-left .btn:hover{
+    background-color: #094ed1;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
-.left-hero .blue {
+.hero-left .blue {
     color: rgb(89, 128, 255);
 }
-.left-hero #element {
+.hero-left #element {
     background: linear-gradient(135deg, #3dc8e0, #057996);
     /* Standard property */
     background-clip: text;
@@ -130,32 +136,33 @@ html{
     -webkit-background-clip: text;
     color: transparent;
 }
-.left-hero .icons {
+.hero-left .icons {
     margin-left: 25px; 
 }
-.left-hero .icons i {
+.hero-left .icons i {
     color: rgb(68, 76, 80);
-    font-size: 2.60rem; 
+    font-size: 2.60rem;
+    transition: transform 0.3s; 
 }
-.left-hero .icons i:hover {
+.hero-left .icons i:hover {
     color: rgb(88, 141, 253);
-    font-size: 2.90rem;
+    transform: translateY(-5px);
 }
 
-.right-hero {
+.hero-right {
     width: 40%;
 }
-.right-hero img {
-    width: 65%;
+.hero-right img {
+    width: 70%;
     border-radius: 50%;
-    margin-top: 8rem;
+    padding-top: 5rem;
 }
 /* ------------ About Section ------------------ */
-.about_sec {
+.about_section {
     padding: 40px 20px;
 }
 
-.about_sec .Info {
+.about_section .Info {
     padding: 10px;
     margin: 2rem auto;
     width: 60%;
@@ -167,7 +174,7 @@ html{
 
 /* --------------------------Skill-section--------------------*/
 
-.skill_sec{
+.skill_section{
     padding-top: 1.5rem;
 }
 .skills-tab{
@@ -203,7 +210,7 @@ html{
 }
 
 /* --------------Project Section ------------------ */
-.project_sec{
+.project_section{
     margin: 2rem 0;
     padding: 40px 100px;
 }
@@ -223,6 +230,8 @@ html{
 }
 .project_info img{
     width: 100%;
+    height:100%;
+    object-fit: cover;
     border-radius: 10px;
     display: block; 
     transition: transform 0.3s;
@@ -241,10 +250,13 @@ html{
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    transition: height 0.5s;
+    transition: height 0.5s ease;
 }
 .layer h3{
     font-weight: 500;
+    margin-bottom: 15px;
+}
+.project_descript{
     margin-bottom: 15px;
 }
 .layer a{
@@ -266,22 +278,20 @@ html{
 }
 
 /* --------------------- Contact Section ------------ */
-.contact_sec{
+.contact_section{
     padding: 2rem;
 }
 .contact_box{
     display: flex;
     justify-content: space-around;
-    padding: 6rem;
+    padding: 3rem 5rem;
 }
 .left_contact{
-    width: 35%;
-    /* opacity: 0.9; */
+    flex:1;
 }
 .left_contact h3 {
     margin-bottom: 30px;
-    font-size: 30px;
-    
+    font-size: 30px;   
 }
 .left_contact p {
     margin-bottom: 12px;
@@ -308,7 +318,7 @@ html{
     color: #2e87fd;
 }
 .right_contact{
-    width: 60%;
+    flex: 2;
 }
 .right_contact form{
     width: 100%;
@@ -343,87 +353,144 @@ form input, form textarea{
 
 /* -------------------- Footer ----------------------- */
 .footer{
-    height: 100px;
     width: 100%;
+    padding: 40px 0;
     background-color: #7f7f7f;
 }
 .footer p{
     text-align: center;
-    padding-top: 40px;
+    /* padding-top: 10px; */
     /* color: #fff; */
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* -------------Media query ------------ */
-        /* --------- for small devices ------------ */
-@media (max-width: 600px){
+/* ===============================
+   TABLET (max-width: 992px)
+================================= */
+@media (max-width: 992px){
+
+    /* Navbar */
     .nav {
         flex-direction: column;
         align-items: start;
         justify-content: center;
-         
-    }
-    .nav_logo a{
-        font-size: 1.7rem;
-        margin-left: 2rem;
-
+        height: auto;
     }
     .nav_menu{
-        width: 50%;
-        background-color: #eb6a6a;
         position: absolute;
+        top: 100%;   
         right: -100%;
-        top: 100%;
+        width: 50%;
         height: 100vh;
+        background-color: #6ba4f0;
         transition: right 0.5s;
+        align-items: flex-start;
     }
+
     .nav_menu ul{
         flex-direction: column;
-        width: 150px;
-        padding: 3rem;
+        width: 100%;
+        padding: 2.5rem;
         font-size: 24px;
-        margin-top: -8rem;
     }
+
     .nav_menu ul li{
         margin-bottom: 2rem;
+        margin-right: 0;
     }
+
     .fa-bars{
         display: block;
         position: absolute;
         right: 50px;
         font-size: 25px;
     }
+
     .nav .nav_menu.active{
         right: 0;
     }
 
-    .Hero_sec{
+    /* Hero */
+    .hero-left {
+        font-size: 1.4rem;
+        padding-left: 0;
+    }
+    .hero-left #element{
+        font-size: 2rem;
+    }
+    .hero-left .btn{
+        width: 60%;
+    }
+
+    .hero-right img{
+        width: 70%;
+    }
+
+    /* About */
+    .about_section .Info {
+        width: 85%;
+        font-size: 1.15rem;
+    }
+
+    /* Skills */
+    .skills-tab{
+        flex-wrap: wrap;
+    }
+
+    .skills-tab .skill-box{
+        width: 40%;
+        margin-bottom: 20px;
+    }
+    /* Projects */
+    .project_section{
+        padding: 20px;
+    }
+    /* Contact */
+    .contact_box{
+        padding: 1rem;
+    }
+    .left_contact p, .left_contact p i {
+        font-size: 16px;
+    }
+}
+
+
+/* ===============================
+    MOBILE DEVICES (max-width: 600px)
+================================= */
+@media (max-width: 600px){
+    
+    .nav_logo a{
+        font-size: 1.8rem;
+        margin-left: 2rem;
+
+    }
+    
+    .hero_section{
         flex-direction: column;
-        background-color: red;
         width: 100%;
         text-align: center;
     }
     
-    .left-hero{
+    .hero-left{
         width: 90%;
+        font-size: 1.25rem;
+    }
+    .hero-left #element{
+        font-size: 1.6rem;
+    }
+    .hero-left .btn{
         font-size: 1rem;
     }
-    .left-hero .btn{
-        width: 50%;
-        font-size: 1rem;
-    }
-    .left-hero .btn:hover{
-        font-size: 1rem;
-    }
-    .right-hero{
+    .hero-right{
         width: 100%;
     }
-    .right-hero img{
-        margin-top: 4rem;
+    .hero-right img{
+        padding-top: 2rem;
     }
-    .about_sec .Info {
-        width: 85%;
-        font-size: 1rem;
+    .about_section .Info {
+        font-size: 1.1rem;
     }
     .skills-tab{
         flex-direction: column;
@@ -431,156 +498,16 @@ form input, form textarea{
     }
     .skills-tab .skill-box{
         width: 90%;
-        margin-bottom: 20px;
-    }
-    .project_sec{
-        padding: 20px;
     }
     .contact_box{
         flex-direction: column;
-        padding: 2rem;
+        padding: 0.5rem;
     }
-    .left_contact{
-        width: 100%;
-    }
-    .right_contact{
-        width: 100%;
+    #msg{
+    font-size: 15px;
     }
     .footer p{
         font-size: 12px;
     }
 }
 
-
-
-/* ===============================
-   TABLET DEVICES (max-width: 992px)
-================================= */
-/* 
-@media (max-width: 992px) {
-
-    nav .nav_logo a {
-        font-size: 1.8rem;
-        margin-left: 1rem;
-    }
-
-    nav .nav_menu ul li {
-        margin-right: 20px;
-    }
-
-    .Hero_sec {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        margin-top: 120px;
-    }
-
-    .Hero_sec .left-hero,
-    .Hero_sec .right-hero {
-        width: 100%;
-    }
-
-    .Hero_sec .right-hero img {
-        width: 50%;
-        margin-top: 2rem;
-    }
-
-    .about_sec {
-        height: auto;
-    }
-
-    .about_sec .Info {
-        width: 80%;
-    }
-
-    .skill_sec .skills-tab {
-        flex-wrap: wrap;
-    }
-
-    .skill_sec .skills-tab .skill-box {
-        width: 45%;
-        margin-bottom: 20px;
-    }
-
-    .contact_box {
-        flex-direction: column;
-        padding: 2rem;
-    }
-
-    .left_contact,
-    .right_contact {
-        width: 100%;
-    }
-}
-
-
-/* ===============================
-   MOBILE DEVICES (max-width: 600px)
-================================= */
-/* 
-@media (max-width: 600px) {
-
-    nav {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    nav .nav_menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav .nav_menu ul li {
-        margin: 10px 0;
-    }
-
-    .Hero_sec .left-hero {
-        font-size: 1.5rem;
-        width: 90%;
-    }
-
-    .Hero_sec .left-hero .btn {
-        width: 60%;
-    }
-
-    .Hero_sec .right-hero img {
-        width: 70%;
-    }
-
-    .about_sec .Info {
-        width: 95%;
-        font-size: 1rem;
-    }
-
-    .skill_sec .skills-tab {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skill_sec .skills-tab .skill-box {
-        width: 90%;
-    }
-
-    .project-list {
-        padding: 20px;
-    }
-
-    .contact_box {
-        padding: 1rem;
-    }
-
-    .sect_title {
-        font-size: 1.8rem;
-    }
-
-}
-  */
-
-
-
-/* -----------------Animation------------------ */
-/* @keyframe form input{
-    from{width: 50%;}
-    to{width: 80%;}
-} */
